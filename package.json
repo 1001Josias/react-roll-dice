@@ -1,0 +1,68 @@
+{
+  "name": "react-roll-dice",
+  "version": "1.0.0",
+  "description": "Lightweight dice rolling to react with full customization.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1001Josias/react-roll-dice.git"
+  },
+  "files": [
+    "dist",
+    "LICENCE",
+    "README.md"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "dice",
+    "dice-roll",
+    "roll-dice",
+    "roll-dice-react",
+    "react-roll-dice",
+    "react-dice-roll",
+    "react-dice",
+    "react-dice-roller",
+    "react-dice-rolling",
+    "react-dice-rolling-component",
+    "react-dice-rolling-component-library",
+    "react-dice-rolling-component-library-typescript"
+  ],
+  "author": "Josias Junior (1001Josias)",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.5",
+    "@types/react": "^18.2.25",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.7.0",
+    "jest-canvas-mock": "^2.5.2",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
+}
